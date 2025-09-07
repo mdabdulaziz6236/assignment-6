@@ -43,11 +43,12 @@
         <div class="navbar-start">
           <h1 class="md:text-2xl text-xl mr-2">Green Earth</h1>
         </div>
-        <div class="navbar-center">
-          <p class="md:mr-6 mr-3">About</p>
-          <p class="md:mr-6 mr-3">Gallery</p>
-          <p class="md:mr-6 mr-3">Plant a Tree</p>
+        <div class="navbar-center flex">
+          <a href="" class="md:mr-6 mr-3 hover:underline">About</a>
+          <a href="" class="md:mr-6 mr-3 hover:underline">Gallery</a>
+          <a href="" class="md:mr-6 mr-3 hover:underline">Plant a Tree</a>
         </div>
+
         <div class="navbar-end">
           <button
             class="hover:bg-green-800 hover:text-white transition-colors duration-300 p-2 md:px-3 rounded-[23px] md:text-[18px] font-medium text-[#15803D] bg-[#FACC15] border-0"
@@ -57,7 +58,6 @@
         </div>
       </div>
     </header>
-
     <!-- Banner -->
     <section class="bg-[#CFF0DC]">
       <div class="flex justify-center items-center py-9 lg:py-0">
@@ -80,7 +80,6 @@
         <img class="hidden md:block" src="assets/hero-leaf2.png" alt="" />
       </div>
     </section>
-
     <!-- Card Section -->
     <section class="bg-[#f0fdf4] pt-20">
       <div class="w-11/12 mx-auto">
@@ -137,7 +136,6 @@
         </div>
       </div>
     </section>
-
     <!-- About the Campaign -->
     <section class="grid grid-cols-5 gap-4 bg-[#f0fdf4] py-9 md:py-[100px]">
       <div></div>
@@ -166,11 +164,12 @@
       </div>
       <div></div>
     </section>
-
     <!-- Our Impact -->
     <section class="bg-[#CFF0DC]">
       <div class="text-center py-10 md:py-[100px] w-11/12 mx-auto">
-        <h1 class="mb-10 md:text-[32px] font-semibold text-[30px]">
+        <h1
+          class="mb-10 md:text-[32px] font-semibold text-[30px] text-[#15803d]"
+        >
           Our Impact
         </h1>
         <div class="flex space-x-4 justify-center items-center">
@@ -213,7 +212,6 @@
         </div>
       </div>
     </section>
-
     <!-- Plant a Tree Today -->
     <section class="bg-[#166534] grid grid-cols-5 md:grid-cols-3">
       <div class="col-span-1"></div>
@@ -236,9 +234,9 @@
             class="w-full border-none bg-white pt-3 pr-10 pb-3 pl-5 mb-2 rounded-xl md:mb-3"
           >
             <option disabled selected>Number of Trees</option>
-            <option>Crimson</option>
-            <option>Amber</option>
-            <option>Velvet</option>
+            <option>Tree 1 to 50</option>
+            <option>Tree 51 to 100</option>
+            <option>Tree 101 to end.</option>
           </select>
           <button
             class="hover:bg-green-800 hover:text-white transition-colors duration-300 pt-3 pr-5 pb-3 pl-5 md:p-2 rounded-full font-medium text-[#15803D] bg-[#FACC15] border-0"
@@ -249,14 +247,12 @@
       </div>
       <div class="col-span-1"></div>
     </section>
-
     <!-- Footer -->
     <section class="bg-[#14532d]">
       <h1 class="font-medium text-[18px] text-center text-white p-6">
         © 2025 Green Earth. All Rights Reserved.
       </h1>
     </section>
-
     <!-- Modal -->
     <dialog id="plantModal" class="modal modal-bottom sm:modal-middle">
       <div class="modal-box">
@@ -288,7 +284,6 @@
         </div>
       </div>
     </dialog>
-
     <!-- Script -->
     <script src="style.js"></script>
   </body>
