@@ -18,7 +18,16 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <!--  -->
+
+    <!-- font  awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- style css file -->
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
@@ -66,6 +75,77 @@
         <img class="hidden md:block" src="assets/hero-leaf2.png" alt="" />
       </div>
     </section>
+    <!-- card section -->
+    <section class="bg-[#f0fdf4] pt-20">
+      <div class="w-11/12 mx-auto">
+        <h1
+          class="font-bold text-[23px] md:text-[33px] pt-3 md:mb-10 mb-3 text-center"
+        >
+          Choose Your Trees
+        </h1>
+
+        <div class="grid md:grid-cols-5 gap-5">
+          <div class="col-span-1">
+            <div>
+              <h1 class="text-[23px] font-bold mb-4">Categories</h1>
+            </div>
+
+            <!-- Dynamic categories will be appended here -->
+            <div id="category-container" class="gap-3"></div>
+          </div>
+          <div class="col-span-3 w-9/12 mx-auto lg:w-full">
+            <!-- Middle content -->
+            <div id="plant-container" class="grid md:grid-cols-3 gap-5">
+              <div class="shadow bg-white rounded-xl flex flex-col m-b[30px]">
+                <img
+                  class="rounded-t-xl h-45 w-full object-cover"
+                  src="https://i.ibb.co.com/cSQdg7tf/mango-min.jpg"
+                  alt=""
+                />
+                <div class="p-3">
+                  <h3 class="font-semibold text-[23px] mb-2">Hello</h3>
+                  <p class="mb-2">
+                    A fast-growing tropical tree that produces delicious, juicy
+                    mangoes during summer. Its dense green
+                  </p>
+                  <div class="flex justify-between items-center mb-2">
+                    <p
+                      class="text-[#15803d] text-[16px] font-medium rounded-full bg-green-300 pt-3 pr-5 pb-3 pl-5 md:px-2 md:py-1.5 mb-2 inline-block"
+                    >
+                      fruit tree
+                    </p>
+                    <p class="font-semibold text-[18px]">৳ <span>500</span></p>
+                  </div>
+                  <button
+                    class="w-full hover:bg-green-950 hover:text-white transition-colors duration-300 pt-3 pr-5 pb-3 pl-5 md:p-2 rounded-full font-medium text-white bg-[#15803d] border-0"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- count part -->
+          <div class="col-span-1 bg-white shadow rounded-xl">
+            <div class="md:p-5 p-3">
+              <h1 class="text-[23px] font-bold mb-4">Your Cart</h1>
+              <div class="">
+                <!-- count div -->
+                <div id="count-container"></div>
+
+                <hr class="mt-2" />
+                <div class="flex justify-between mt-3">
+                  <h1 class="font-semibold text-[23px]">Total :</h1>
+                  <p class="font-semibold text-[18px]">
+                    ৳ <span id="total-amount">500</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- About the Campaign section -->
     <section class="grid grid-cols-5 gap-4 bg-[#f0fdf4] py-9 md:py-[100px]">
       <div></div>
@@ -79,7 +159,7 @@
           <img class="flex-1 mb-8" src="assets/about.png" alt="" />
 
           <div class="flex-1">
-            <p class="text-center lg:text-start">
+            <p>
               Green Earth is a global tree plantation initiative dedicated to
               fighting climate change. Since our start, we’ve planted over
               500,000 trees worldwide. By joining our campaign, you help restore
@@ -174,5 +254,41 @@
         © 2025 Green Earth. All Rights Reserved.
       </h1>
     </section>
+
+    <!-- modal section -->
+    <dialog id="plantModal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <h2 id="modalName" class="text-2xl font-bold mb-2"></h2>
+
+        <img
+          id="modalImage"
+          class="w-full h-64 object-cover rounded-lg mb-4"
+          src=""
+          alt=""
+        />
+        <p class="mb-2">
+          <span class="text-[18px] font-medium">Category :</span>
+          <span id="modalCategory"></span>
+        </p>
+        <p class="mb-4">
+          <span class="font-medium text-[18px]">Description :</span
+          ><span class="" id="modalDescription"></span>
+        </p>
+        <p class="font-medium text-lg">
+          Price: ৳ <span id="modalPrice" class=""></span>
+        </p>
+        <div class="flex justify-center items-center">
+          <button
+            id="closeModal"
+            class="btn mt-2 bg-[green] text-white hover:bg-green-950 hover:text-white"
+          >
+            close
+          </button>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- script link -->
+    <script src="style.js"></script>
   </body>
 </html>
